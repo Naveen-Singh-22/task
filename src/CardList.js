@@ -7,6 +7,7 @@ const CARDS_PER_PAGE = 6;
 const CardList = () => {
   const { posts, setPosts, loading, page, setPage } = useContext(PostContext);
 
+  
   const startIdx = (page - 1) * CARDS_PER_PAGE;
   const currentCards = posts.slice(startIdx, startIdx + CARDS_PER_PAGE);
   const totalPages = Math.ceil(posts.length / CARDS_PER_PAGE);
